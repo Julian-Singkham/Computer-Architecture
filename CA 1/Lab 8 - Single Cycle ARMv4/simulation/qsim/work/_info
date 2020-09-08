@@ -1,0 +1,190 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/School/CE1921/Lab 8 - Single Cycle ARMv4/simulation/qsim
+Efetch
+Z1 w1556917442
+Z2 DPx11 fiftyfivenm 21 fiftyfivenm_atom_pack 0 22 b:4^GQG9SgzacjAmO=9`O0
+Z3 DPx11 fiftyfivenm 22 fiftyfivenm_components 0 22 3g0@koWcWFU4ch:4ZJbzl1
+Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z5 DPx6 altera 11 dffeas_pack 0 22 Dg`GWTC`^Q8GNSMPeo22;3
+Z6 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z9 DPx6 altera 28 altera_primitives_components 0 22 _LNC5n6B?5VN@W;M4Dg@k1
+R0
+Z10 8lab8.vho
+Z11 Flab8.vho
+l0
+L36
+VOW7X`IVzDTb41:CP6JPR22
+!s100 T[5ck8UkKM_;;[8XoYhh00
+Z12 OV;C;10.5b;63
+32
+Z13 !s110 1556917443
+!i10b 1
+Z14 !s108 1556917443.000000
+Z15 !s90 -work|work|lab8.vho|
+Z16 !s107 lab8.vho|
+!i113 1
+Z17 o-work work
+Z18 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 5 fetch 0 22 OW7X`IVzDTb41:CP6JPR22
+l414
+L48
+VF>fBQ`Q98G9eT`YEd@Nda1
+!s100 An;I8f<_OWm6jLM9W?e^90
+R12
+32
+R13
+!i10b 1
+R14
+R15
+R16
+!i113 1
+R17
+R18
+Efetch_vhd_vec_tst
+Z19 w1556917440
+R7
+R8
+R0
+Z20 8Waveform.vwf.vht
+Z21 FWaveform.vwf.vht
+l0
+L31
+VbMCUb3oiN1>l?FDiLO<Ib3
+!s100 U:dK0=c=k1NF44nAD[@D]3
+R12
+32
+R13
+!i10b 1
+R14
+Z22 !s90 -work|work|Waveform.vwf.vht|
+Z23 !s107 Waveform.vwf.vht|
+!i113 1
+R17
+R18
+Afetch_arch
+R7
+R8
+DEx4 work 17 fetch_vhd_vec_tst 0 22 bMCUb3oiN1>l?FDiLO<Ib3
+l54
+L33
+V2oYjhbWlj5XRC>ME33MnD3
+!s100 `^fkYWF9=Y]cYNm`WZ?N73
+R12
+32
+R13
+!i10b 1
+R14
+R22
+R23
+!i113 1
+R17
+R18
+Escp
+Z24 w1558150000
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R0
+R10
+R11
+l0
+L36
+VcWf3obakd3ob1N6jXNk842
+!s100 Lnai_FDHVR`ZLT@1]GY<C1
+R12
+32
+Z25 !s110 1558150001
+!i10b 1
+Z26 !s108 1558150001.000000
+R15
+R16
+!i113 1
+R17
+R18
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 3 scp 0 22 cWf3obakd3ob1N6jXNk842
+l3909
+L60
+VA_Yk11g;:ZEUU0fAHeH[g0
+!s100 J78_`Z9M2IT0Ob1PMCPU<1
+R12
+32
+R25
+!i10b 1
+R26
+R15
+R16
+!i113 1
+R17
+R18
+Escp_vhd_vec_tst
+Z27 w1558149998
+R7
+R8
+R0
+R20
+R21
+l0
+L31
+VQgnRGHWR9oC68ZUBXDLn31
+!s100 FJ0P<m2=:C9Z3A6AJidJ<0
+R12
+32
+R25
+!i10b 1
+R26
+R22
+R23
+!i113 1
+R17
+R18
+Ascp_arch
+R7
+R8
+Z28 DEx4 work 15 scp_vhd_vec_tst 0 22 QgnRGHWR9oC68ZUBXDLn31
+l78
+L33
+Z29 VO<e4HhDfP_5<;ZNlWhIo?1
+Z30 !s100 F^iE3mBBL4WljcQgZFRZg3
+R12
+32
+R25
+!i10b 1
+R26
+R22
+R23
+!i113 1
+R17
+R18

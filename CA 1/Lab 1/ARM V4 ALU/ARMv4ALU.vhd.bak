@@ -1,0 +1,42 @@
+-- ARMv4 Arthimatic Logic Uit
+--TODO
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity ALU is
+	port(
+	A, B: in std_logic_vector(31 downto 0);
+	ALUS: in std_logic_vector(2 downto 0);
+	F: 	out std_logic_vector(31 downto 0);
+	C: 	out std_logic;	--Carry
+	V:		out std_logic;	--oVerflow: 
+	N:		out std_logic;	--Negative
+	Z:		out std_logic 	--Zero
+	);
+end entity;
+
+architecture behav of ALU is
+	signal INTA: std_logic_vector(32 downto 0);
+	signal INTB: std_logic_vector(32 downto 0);
+	signal INTF: std_logic_vector(32 downto 0);
+	
+	begin
+	INTA(31 downto 0) <= A;
+	INTA(32) 		  <= '0';
+	
+	INTB(31 downto 0) <= B;
+	INTB(32) 		  <= '0';
+	
+	--Functions
+	with s select F <= 
+		A + B 	  when "000",
+		A - B 	  when "001",
+		A and B 	  when "010",
+		A or B 	  when "011",
+		A xor B 	  when "100",
+		A			  when "101",
+		B			  when "110",
+		"00000000000000000000000000000001" when others;
+		
+end architecture;

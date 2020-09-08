@@ -1,0 +1,2 @@
+Dependencies for Project 'sumn', Target 'Target 1': (DO NOT MODIFY !)
+F (.\SUMN.s)(0x5CA51BFE)(--cpu ARM7TDMI --bi --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include--list .\sumn.lst --xref -o .\sumn.o --depend .\sumn.d)

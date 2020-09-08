@@ -1,0 +1,46 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             Not,CODE,READONLY
+    2 00000000                 ENTRY
+    3 00000000         
+    4 00000000 E3A04003        MOV              R4,#3       ; X=0011
+    5 00000004 E3A05006        MOV              R5,#6       ; Y=0110
+    6 00000008 E3E06000        MOV              R6,#4294967295 ; Z=0xFFFFFFFF
+    7 0000000C E1844005        ORR              R4,R4,R5    ; X=X OR Y
+    8 00000010 E0246006        EOR              R6,R4,R6    ; Z=X EOR Z
+    9 00000014         
+   10 00000014 EAFFFFFE 
+                       STOP    B                STOP        ; INFINITE LOOP
+   11 00000018         
+   12 00000018                 END
+Command Line: --debug --xref --bi --apcs=interwork --depend=.\onebits.d -o.\one
+bits.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include --predefine="__EVAL S
+ETA 1" --list=.\onebits.lst OneBits.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Not 00000000
+
+Symbol: Not
+   Definitions
+      At line 1 in file OneBits.s
+   Uses
+      None
+Comment: Not unused
+STOP 00000014
+
+Symbol: STOP
+   Definitions
+      At line 10 in file OneBits.s
+   Uses
+      At line 10 in file OneBits.s
+Comment: STOP used once
+2 symbols
+333 symbols in table

@@ -1,0 +1,57 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             Squared,CODE,READONLY
+    2 00000000                 ENTRY
+    3 00000000         
+    4 00000000 E0488008        SUB              R8,R8,R8    ; y=0
+    5 00000004 E2844005        ADD              R4,R4,#5    ; X=5
+    6 00000008 E28CC001        ADD              R12,R12,#1  ; J=1
+    7 0000000C E0888004 
+                       LOOP    ADD              R8,R8,R4    ; Y=Y+X
+    8 00000010 E28CC001        ADD              R12,R12,#1  ; j=j+1
+    9 00000014 E35C0005        CMP              R12,#5      ; IS J=X
+   10 00000018 DAFFFFFB        BLE              LOOP        ; IS J !=X LOOP
+   11 0000001C         
+   12 0000001C EAFFFFFE 
+                       STOP    B                STOP        ; INFINITE LOOP
+   13 00000020         
+   14 00000020                 END
+Command Line: --debug --xref --bi --apcs=interwork --depend=.\squared.d -o.\squ
+ared.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include --predefine="__EVAL S
+ETA 1" --list=.\squared.lst Squared.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+LOOP 0000000C
+
+Symbol: LOOP
+   Definitions
+      At line 7 in file Squared.s
+   Uses
+      At line 10 in file Squared.s
+Comment: LOOP used once
+STOP 0000001C
+
+Symbol: STOP
+   Definitions
+      At line 12 in file Squared.s
+   Uses
+      At line 12 in file Squared.s
+Comment: STOP used once
+Squared 00000000
+
+Symbol: Squared
+   Definitions
+      At line 1 in file Squared.s
+   Uses
+      None
+Comment: Squared unused
+3 symbols
+334 symbols in table

@@ -1,0 +1,58 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             DOUBLEJ,CODE,READONLY
+    2 00000000                 ENTRY
+    3 00000000         
+    4 00000000 E0466006        SUB              R6,R6,R6    ; y=0
+    5 00000004 E04CC00C        SUB              R12,R12,R12 ; J=0
+    6 00000008 E2877006        ADD              R7,R7,#6    ; N=6
+    7 0000000C E086600C 
+                       LOOP    ADD              R6,R6,R12   ; Y=Y+J
+    8 00000010 E086600C        ADD              R6,R6,R12   ; Y=Y+J
+    9 00000014 E28CC001        ADD              R12,R12,#1  ; J=J+1
+   10 00000018 E3560005        CMP              R6,#5       ; IS Y=X
+   11 0000001C DAFFFFFA        BLE              LOOP        ; IS J<X LOOP
+   12 00000020         
+   13 00000020 EAFFFFFE 
+                       STOP    B                STOP        ; INFINITE LOOP
+   14 00000024         
+   15 00000024                 END
+Command Line: --debug --xref --bi --apcs=interwork --depend=.\doublej.d -o.\dou
+blej.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include --predefine="__EVAL S
+ETA 1" --list=.\doublej.lst DOUBLEJ.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+DOUBLEJ 00000000
+
+Symbol: DOUBLEJ
+   Definitions
+      At line 1 in file DOUBLEJ.s
+   Uses
+      None
+Comment: DOUBLEJ unused
+LOOP 0000000C
+
+Symbol: LOOP
+   Definitions
+      At line 7 in file DOUBLEJ.s
+   Uses
+      At line 11 in file DOUBLEJ.s
+Comment: LOOP used once
+STOP 00000020
+
+Symbol: STOP
+   Definitions
+      At line 13 in file DOUBLEJ.s
+   Uses
+      At line 13 in file DOUBLEJ.s
+Comment: STOP used once
+3 symbols
+334 symbols in table

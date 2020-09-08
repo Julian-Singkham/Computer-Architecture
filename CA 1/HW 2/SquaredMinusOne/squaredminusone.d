@@ -1,0 +1,1 @@
+.\squaredminusone.o: SquaredMinusOne.s

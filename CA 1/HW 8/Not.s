@@ -1,0 +1,12 @@
+				AREA Not,CODE,READONLY
+				ENTRY		
+				
+				MOV		R4,#0011			; X=0011
+				MOV		R5,#0110			; Y=0110
+				MOV		R6,#4294967295		; Z=0xFFFFFFFF
+				ORR		R4,R4,R5			; X=X OR Y
+				EOR		R6,R4,R6			; Z=X EOR Z
+				
+STOP			B		STOP		; INFINITE LOOP
+
+				END

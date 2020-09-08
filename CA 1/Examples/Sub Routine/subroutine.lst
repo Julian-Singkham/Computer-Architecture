@@ -1,0 +1,108 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         ; project: may3
+    2 00000000         ; date  may3, 2019
+    3 00000000         ; author Julian Singkham
+    4 00000000         ; algorithm:
+    5 00000000         ;
+    6 00000000         ; int main()
+    7 00000000         ; {
+    8 00000000         ; int S = 0;
+    9 00000000         ;
+   10 00000000         ; s = sum(10);
+   11 00000000         ; wait(1);
+   12 00000000         ; }
+   13 00000000         ;
+   14 00000000         ; int sum(int n)}
+   15 00000000         ; {
+   16 00000000         ; int temp =0;
+   17 00000000         ; int i = 0;
+   18 00000000         ;
+   19 00000000         ; do
+   20 00000000         ;  {
+   21 00000000         ;  temp = temp + i;
+   22 00000000         ;  i = i +1;
+   23 00000000         ; }while(i <= n);
+   24 00000000         ; return temp;
+   25 00000000         ; }
+   26 00000000         
+   27 00000000                 AREA             SubRoutine, CODE, READONLY
+   28 00000000                 ENTRY
+   29 00000000 E3A04000 
+                       MAIN    MOV              R4,#0       ; int s=0
+   30 00000004 E3A0000A        MOV              R0,#10      ; N =M 10, Setting 
+                                                            up param 1
+   31 00000008 EB000001        BL               SUM         ; SUM(10)
+   32 0000000C E1A04000        MOV              R4,R0       ; S=RETURN VALUE
+   33 00000010 EAFFFFFE 
+                       STOP    B                STOP        ; WHILE(1) INFINITE
+                                                             LOOP
+   34 00000014         
+   35 00000014 E3A0C000 
+                       SUM     MOV              R12,#0      ; TEMP = 0
+   36 00000018 E3A01000        MOV              R1,#0       ; I = 0
+   37 0000001C E08CC001 
+                       SUML1   ADD              R12,R12,R1  ; TEMP = TEMP + I
+   38 00000020 E2811001        ADD              R1,R1,#1    ; I++
+   39 00000024 E1510000        CMP              R1,R0       ; I = N
+   40 00000028 DAFFFFFB        BLE              SUML1       ; LOOP AGAIN
+   41 0000002C E1A0000C        MOV              R0,R12      ; RETRUN = TEMP
+   42 00000030 E1A0F00E        MOV              PC,LR       ; PC = RETURN ADDRE
+                                                            SS
+   43 00000034         
+   44 00000034                 END
+Command Line: --debug --xref --bi --apcs=interwork --depend=.\subroutine.d -o.\
+subroutine.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include --predefine="__
+EVAL SETA 1" --list=.\subroutine.lst SubRoutine.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+MAIN 00000000
+
+Symbol: MAIN
+   Definitions
+      At line 29 in file SubRoutine.s
+   Uses
+      None
+Comment: MAIN unused
+STOP 00000010
+
+Symbol: STOP
+   Definitions
+      At line 33 in file SubRoutine.s
+   Uses
+      At line 33 in file SubRoutine.s
+Comment: STOP used once
+SUM 00000014
+
+Symbol: SUM
+   Definitions
+      At line 35 in file SubRoutine.s
+   Uses
+      At line 31 in file SubRoutine.s
+Comment: SUM used once
+SUML1 0000001C
+
+Symbol: SUML1
+   Definitions
+      At line 37 in file SubRoutine.s
+   Uses
+      At line 40 in file SubRoutine.s
+Comment: SUML1 used once
+SubRoutine 00000000
+
+Symbol: SubRoutine
+   Definitions
+      At line 27 in file SubRoutine.s
+   Uses
+      None
+Comment: SubRoutine unused
+5 symbols
+336 symbols in table

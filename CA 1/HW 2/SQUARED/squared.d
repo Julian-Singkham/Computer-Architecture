@@ -1,0 +1,1 @@
+.\squared.o: Squared.s

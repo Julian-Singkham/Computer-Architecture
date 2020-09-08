@@ -1,0 +1,45 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             HW7,CODE,READONLY
+    2 00000000                 ENTRY
+    3 00000000         
+    4 00000000 E0455005        SUB              R5,R5,R5    ; SUM=0
+    5 00000004 E285C014        ADD              R12,R5,#20  ; N=20
+    6 00000008 E025CC9C        MLA              R5,R12,R12,R12 ; SUM=(X*X)+X
+    7 0000000C E1A050A5        LSR              R5,R5,#1    ; SUM=SUM/2
+    8 00000010         
+    9 00000010 EAFFFFFE 
+                       STOP    B                STOP        ; INFINITE LOOP
+   10 00000014         
+   11 00000014                 END
+Command Line: --debug --xref --bi --apcs=interwork --depend=.\hw7.d -o.\hw7.o -
+IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include --predefine="__EVAL SETA 1" -
+-list=.\hw7.lst HW7.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+HW7 00000000
+
+Symbol: HW7
+   Definitions
+      At line 1 in file HW7.s
+   Uses
+      None
+Comment: HW7 unused
+STOP 00000010
+
+Symbol: STOP
+   Definitions
+      At line 9 in file HW7.s
+   Uses
+      At line 9 in file HW7.s
+Comment: STOP used once
+2 symbols
+333 symbols in table

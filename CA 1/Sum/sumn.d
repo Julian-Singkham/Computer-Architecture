@@ -1,0 +1,1 @@
+.\sumn.o: SUMN.s

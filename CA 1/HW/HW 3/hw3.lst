@@ -1,0 +1,58 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             hw3,CODE,READONLY
+    2 00000000                 ENTRY
+    3 00000000         
+    4 00000000 E0455005        SUB              R5,R5,R5    ; S=0
+    5 00000004 E0466006        SUB              R6,R6,R6    ; X=0
+    6 00000008 E085C005        ADD              R12,R5,R5   ; I=0
+    7 0000000C E0060C9C 
+                       LOOP    MUL              R6,R12,R12  ; X=I*I
+    8 00000010 E0855006        ADD              R5,R5,R6    ; S=S+X
+    9 00000014 E28CC001        ADD              R12,R12,#1  ; I=I+1
+   10 00000018 E35C000A        CMP              R12,#10     ; IS I=10
+   11 0000001C DAFFFFFA        BLE              LOOP        ; IS J !=X LOOP
+   12 00000020         
+   13 00000020 EAFFFFFE 
+                       STOP    B                STOP        ; INFINITE LOOP
+   14 00000024         
+   15 00000024                 END
+Command Line: --debug --xref --bi --apcs=interwork --depend=.\hw3.d -o.\hw3.o -
+IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include --predefine="__EVAL SETA 1" -
+-list=.\hw3.lst hw3.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+LOOP 0000000C
+
+Symbol: LOOP
+   Definitions
+      At line 7 in file hw3.s
+   Uses
+      At line 11 in file hw3.s
+Comment: LOOP used once
+STOP 00000020
+
+Symbol: STOP
+   Definitions
+      At line 13 in file hw3.s
+   Uses
+      At line 13 in file hw3.s
+Comment: STOP used once
+hw3 00000000
+
+Symbol: hw3
+   Definitions
+      At line 1 in file hw3.s
+   Uses
+      None
+Comment: hw3 unused
+3 symbols
+334 symbols in table

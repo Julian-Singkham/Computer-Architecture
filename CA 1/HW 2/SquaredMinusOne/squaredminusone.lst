@@ -1,0 +1,59 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             SquaredMinusOne,CODE,READONLY
+    2 00000000                 ENTRY
+    3 00000000         
+    4 00000000 E0400000        SUB              R0,R0,R0    ; y=0
+    5 00000004 E24CC001        SUB              R12,R12,#1  ; J=1
+    6 00000008 E2811006        ADD              R1,R1,#6    ; N=6
+    7 0000000C E080000C 
+                       LOOP    ADD              R0,R0,R12   ; Y=Y+J
+    8 00000010 E080000C        ADD              R0,R0,R12   ; Y=Y+J
+    9 00000014 E28CC001        ADD              R12,R12,#1  ; J=J+1
+   10 00000018 E1500001        CMP              R0,R1       ; IS Y=N
+   11 0000001C DAFFFFFA        BLE              LOOP        ; IS Y<N LOOP
+   12 00000020 E2800001        SUB              R0,R0,#-1   ; Y=Y-1
+   13 00000024         
+   14 00000024 EAFFFFFE 
+                       STOP    B                STOP        ; INFINITE LOOP
+   15 00000028         
+   16 00000028                 END
+Command Line: --debug --xref --bi --apcs=interwork --depend=.\squaredminusone.d
+ -o.\squaredminusone.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include --pre
+define="__EVAL SETA 1" --list=.\squaredminusone.lst SquaredMinusOne.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+LOOP 0000000C
+
+Symbol: LOOP
+   Definitions
+      At line 7 in file SquaredMinusOne.s
+   Uses
+      At line 11 in file SquaredMinusOne.s
+Comment: LOOP used once
+STOP 00000024
+
+Symbol: STOP
+   Definitions
+      At line 14 in file SquaredMinusOne.s
+   Uses
+      At line 14 in file SquaredMinusOne.s
+Comment: STOP used once
+SquaredMinusOne 00000000
+
+Symbol: SquaredMinusOne
+   Definitions
+      At line 1 in file SquaredMinusOne.s
+   Uses
+      None
+Comment: SquaredMinusOne unused
+3 symbols
+334 symbols in table

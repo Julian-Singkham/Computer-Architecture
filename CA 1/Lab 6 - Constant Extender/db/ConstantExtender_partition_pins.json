@@ -1,0 +1,241 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "imm32[0]",
+					"strict" : false
+				},
+				{
+					"name" : "imm32[1]",
+					"strict" : false
+				},
+				{
+					"name" : "imm32[2]",
+					"strict" : false
+				},
+				{
+					"name" : "imm32[3]",
+					"strict" : false
+				},
+				{
+					"name" : "imm32[4]",
+					"strict" : false
+				},
+				{
+					"name" : "imm32[5]",
+					"strict" : false
+				},
+				{
+					"name" : "imm32[6]",
+					"strict" : false
+				},
+				{
+					"name" : "imm32[7]",
+					"strict" : false
+				},
+				{
+					"name" : "imm32[8]",
+					"strict" : false
+				},
+				{
+					"name" : "imm32[9]",
+					"strict" : false
+				},
+				{
+					"name" : "imm32[10]",
+					"strict" : false
+				},
+				{
+					"name" : "imm32[11]",
+					"strict" : false
+				},
+				{
+					"name" : "imm32[12]",
+					"strict" : false
+				},
+				{
+					"name" : "imm32[13]",
+					"strict" : false
+				},
+				{
+					"name" : "imm32[14]",
+					"strict" : false
+				},
+				{
+					"name" : "imm32[15]",
+					"strict" : false
+				},
+				{
+					"name" : "imm32[16]",
+					"strict" : false
+				},
+				{
+					"name" : "imm32[17]",
+					"strict" : false
+				},
+				{
+					"name" : "imm32[18]",
+					"strict" : false
+				},
+				{
+					"name" : "imm32[19]",
+					"strict" : false
+				},
+				{
+					"name" : "imm32[20]",
+					"strict" : false
+				},
+				{
+					"name" : "imm32[21]",
+					"strict" : false
+				},
+				{
+					"name" : "imm32[22]",
+					"strict" : false
+				},
+				{
+					"name" : "imm32[23]",
+					"strict" : false
+				},
+				{
+					"name" : "imm32[24]",
+					"strict" : false
+				},
+				{
+					"name" : "imm32[25]",
+					"strict" : false
+				},
+				{
+					"name" : "imm32[26]",
+					"strict" : false
+				},
+				{
+					"name" : "imm32[27]",
+					"strict" : false
+				},
+				{
+					"name" : "imm32[28]",
+					"strict" : false
+				},
+				{
+					"name" : "imm32[29]",
+					"strict" : false
+				},
+				{
+					"name" : "imm32[30]",
+					"strict" : false
+				},
+				{
+					"name" : "imm32[31]",
+					"strict" : false
+				},
+				{
+					"name" : "imm[0]",
+					"strict" : false
+				},
+				{
+					"name" : "exts[1]",
+					"strict" : false
+				},
+				{
+					"name" : "imm[1]",
+					"strict" : false
+				},
+				{
+					"name" : "imm[2]",
+					"strict" : false
+				},
+				{
+					"name" : "imm[3]",
+					"strict" : false
+				},
+				{
+					"name" : "imm[4]",
+					"strict" : false
+				},
+				{
+					"name" : "imm[5]",
+					"strict" : false
+				},
+				{
+					"name" : "imm[6]",
+					"strict" : false
+				},
+				{
+					"name" : "imm[7]",
+					"strict" : false
+				},
+				{
+					"name" : "imm[8]",
+					"strict" : false
+				},
+				{
+					"name" : "exts[0]",
+					"strict" : false
+				},
+				{
+					"name" : "imm[9]",
+					"strict" : false
+				},
+				{
+					"name" : "imm[10]",
+					"strict" : false
+				},
+				{
+					"name" : "imm[11]",
+					"strict" : false
+				},
+				{
+					"name" : "imm[12]",
+					"strict" : false
+				},
+				{
+					"name" : "imm[13]",
+					"strict" : false
+				},
+				{
+					"name" : "imm[14]",
+					"strict" : false
+				},
+				{
+					"name" : "imm[15]",
+					"strict" : false
+				},
+				{
+					"name" : "imm[16]",
+					"strict" : false
+				},
+				{
+					"name" : "imm[17]",
+					"strict" : false
+				},
+				{
+					"name" : "imm[18]",
+					"strict" : false
+				},
+				{
+					"name" : "imm[19]",
+					"strict" : false
+				},
+				{
+					"name" : "imm[20]",
+					"strict" : false
+				},
+				{
+					"name" : "imm[21]",
+					"strict" : false
+				},
+				{
+					"name" : "imm[22]",
+					"strict" : false
+				},
+				{
+					"name" : "imm[23]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

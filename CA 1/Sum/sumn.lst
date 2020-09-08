@@ -1,0 +1,80 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             SUMN, CODE, READONLY
+    2 00000000         
+    3 00000000 00000003 
+                       N       EQU              3
+    4 00000000         
+    5 00000000                 ENTRY
+    6 00000000 E3A04000        MOV              R4,#0       ; SUM=0
+    7 00000004 E3A05001        MOV              R5,#1       ; J=1
+    8 00000008 E0844005 
+                       LOOP    ADD              R4,R4,R5    ; SUM=SUM+J
+    9 0000000C E2855001        ADD              R5,R5,#1    ; J=J+1
+   10 00000010 E3550003        CMP              R5,#N       ; IF R5<=N
+   11 00000014 DAFFFFFB        BLE              LOOP        ; THEN BRANCH BACK 
+                                                            TO LOOP
+   12 00000018         
+   13 00000018 E59F500C        LDR              R5,=3276    ; 
+   14 0000001C E2422D05        SUB              R2,R2,#320  ; 
+   15 00000020 E3510801        CMP              R1,#65536   ; 
+   16 00000024 E0214006        EOR              R4,R1,R6    ; 
+   17 00000028         
+   18 00000028 EAFFFFFE 
+                       STOP    B                STOP        ; INFINTE LOOP
+   19 0000002C                 END
+              00000CCC 
+Command Line: --debug --xref --bi --apcs=interwork --depend=.\sumn.d -o.\sumn.o
+ -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include --predefine="__EVAL SETA 1"
+ --list=.\sumn.lst SUMN.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+LOOP 00000008
+
+Symbol: LOOP
+   Definitions
+      At line 8 in file SUMN.s
+   Uses
+      At line 11 in file SUMN.s
+Comment: LOOP used once
+STOP 00000028
+
+Symbol: STOP
+   Definitions
+      At line 18 in file SUMN.s
+   Uses
+      At line 18 in file SUMN.s
+Comment: STOP used once
+SUMN 00000000
+
+Symbol: SUMN
+   Definitions
+      At line 1 in file SUMN.s
+   Uses
+      None
+Comment: SUMN unused
+3 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Absolute symbols
+
+N 00000003
+
+Symbol: N
+   Definitions
+      At line 3 in file SUMN.s
+   Uses
+      At line 10 in file SUMN.s
+Comment: N used once
+1 symbol
+337 symbols in table

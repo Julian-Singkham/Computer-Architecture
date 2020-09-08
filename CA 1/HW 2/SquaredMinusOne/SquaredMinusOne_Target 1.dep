@@ -1,0 +1,2 @@
+Dependencies for Project 'SquaredMinusOne', Target 'Target 1': (DO NOT MODIFY !)
+F (.\SquaredMinusOne.s)(0x5C9930A7)(--cpu ARM7TDMI --bi --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include--list .\squaredminusone.lst --xref -o .\squaredminusone.o --depend .\squaredminusone.d)

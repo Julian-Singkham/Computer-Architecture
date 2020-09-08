@@ -1,0 +1,68 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             OneBits,CODE,READONLY
+    2 00000000                 ENTRY
+    3 00000000         
+    4 00000000 E3A04065        MOV              R4,#101     ; X=1101
+    5 00000004 E3E0C000        MOV              R12,#-1     ; J=-1 Counter
+    6 00000008 E28CC001 
+                       FoundOne
+                               ADD              R12,R12,#1  ; J++
+    7 0000000C E1B040A4 
+                       NotEmpty
+                               MOVS             R4,R4,LSR#1 ; Shift Left once
+    8 00000010 2AFFFFFC        BCS              FoundOne
+    9 00000014 E3540000        CMP              R4,#0       ;Is X = 0
+   10 00000018 1AFFFFFB        BNE              NotEmpty
+   11 0000001C         
+   12 0000001C EAFFFFFE 
+                       STOP    B                STOP        ; INFINITE LOOP
+   13 00000020         
+   14 00000020                 END
+Command Line: --debug --xref --bi --apcs=interwork --depend=.\onebits.d -o.\one
+bits.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include --predefine="__EVAL S
+ETA 1" --list=.\onebits.lst OneBits.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+FoundOne 00000008
+
+Symbol: FoundOne
+   Definitions
+      At line 6 in file OneBits.s
+   Uses
+      At line 8 in file OneBits.s
+Comment: FoundOne used once
+NotEmpty 0000000C
+
+Symbol: NotEmpty
+   Definitions
+      At line 7 in file OneBits.s
+   Uses
+      At line 10 in file OneBits.s
+Comment: NotEmpty used once
+OneBits 00000000
+
+Symbol: OneBits
+   Definitions
+      At line 1 in file OneBits.s
+   Uses
+      None
+Comment: OneBits unused
+STOP 0000001C
+
+Symbol: STOP
+   Definitions
+      At line 12 in file OneBits.s
+   Uses
+      At line 12 in file OneBits.s
+Comment: STOP used once
+4 symbols
+335 symbols in table

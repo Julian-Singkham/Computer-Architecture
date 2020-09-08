@@ -1,0 +1,2 @@
+Dependencies for Project 'HW6', Target 'Target 1': (DO NOT MODIFY !)
+F (.\HW6.s)(0x5CC9EC0C)(--cpu ARM7TDMI --bi --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include--list .\hw6.lst --xref -o .\hw6.o --depend .\hw6.d)

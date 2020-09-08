@@ -1,0 +1,1 @@
+.\doublej.o: DOUBLEJ.s

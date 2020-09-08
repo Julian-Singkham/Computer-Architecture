@@ -1,0 +1,56 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             HW6,CODE,READONLY
+    2 00000000                 ENTRY
+    3 00000000         
+    4 00000000 E0499009        SUB              R9,R9,R9    ; X=0
+    5 00000004 E289C00A        ADD              R12,R9,#10  ; j=10
+    6 00000008 E089930C 
+                       LOOP    ADD              R9,R9,R12,LSL#6 ; X=X+(J*2^6)
+    7 0000000C E24CC001        SUB              R12,R12,#1  ; J=J-1
+    8 00000010 E35C0000        CMP              R12,#0      ; IS J=0
+    9 00000014 CAFFFFFB        BGT              LOOP        ; IS J > 0 LOOP
+   10 00000018         
+   11 00000018 EAFFFFFE 
+                       STOP    B                STOP        ; INFINITE LOOP
+   12 0000001C         
+   13 0000001C                 END
+Command Line: --debug --xref --bi --apcs=interwork --depend=.\hw6.d -o.\hw6.o -
+IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include --predefine="__EVAL SETA 1" -
+-list=.\hw6.lst HW6.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+HW6 00000000
+
+Symbol: HW6
+   Definitions
+      At line 1 in file HW6.s
+   Uses
+      None
+Comment: HW6 unused
+LOOP 00000008
+
+Symbol: LOOP
+   Definitions
+      At line 6 in file HW6.s
+   Uses
+      At line 9 in file HW6.s
+Comment: LOOP used once
+STOP 00000018
+
+Symbol: STOP
+   Definitions
+      At line 11 in file HW6.s
+   Uses
+      At line 11 in file HW6.s
+Comment: STOP used once
+3 symbols
+334 symbols in table

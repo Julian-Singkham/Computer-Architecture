@@ -1,0 +1,498 @@
+Analysis & Synthesis report for DE10Computer
+Fri May 17 15:57:50 2019
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri May 17 15:57:50 2019       ;
+; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Revision Name                      ; DE10Computer                                ;
+; Top-level Entity Name              ; DE10Computer                                ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 3,485                                       ;
+;     Total combinational functions  ; 1,967                                       ;
+;     Dedicated logic registers      ; 1,618                                       ;
+; Total registers                    ; 1618                                        ;
+; Total pins                         ; 220                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DAF484C7G     ;                    ;
+; Top-level entity name                                            ; DE10Computer       ; DE10Computer       ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                    ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                          ; Library ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------+---------+
+; seg7decode.vhd                   ; yes             ; User VHDL File                     ; C:/School/CE1921/Lab 10 - De10 SCP/seg7decode.vhd     ;         ;
+; SCP.bdf                          ; yes             ; User Block Diagram/Schematic File  ; C:/School/CE1921/Lab 10 - De10 SCP/SCP.bdf            ;         ;
+; Fetch.bdf                        ; yes             ; User Block Diagram/Schematic File  ; C:/School/CE1921/Lab 10 - De10 SCP/Fetch.bdf          ;         ;
+; Decode.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/School/CE1921/Lab 10 - De10 SCP/Decode.bdf         ;         ;
+; RegSRCBmux.vhd                   ; yes             ; User VHDL File                     ; C:/School/CE1921/Lab 10 - De10 SCP/RegSRCBmux.vhd     ;         ;
+; regfile.vhd                      ; yes             ; User VHDL File                     ; C:/School/CE1921/Lab 10 - De10 SCP/regfile.vhd        ;         ;
+; Reg4.vhd                         ; yes             ; User VHDL File                     ; C:/School/CE1921/Lab 10 - De10 SCP/Reg4.vhd           ;         ;
+; PC.vhd                           ; yes             ; User VHDL File                     ; C:/School/CE1921/Lab 10 - De10 SCP/PC.vhd             ;         ;
+; irom.vhd                         ; yes             ; User VHDL File                     ; C:/School/CE1921/Lab 10 - De10 SCP/irom.vhd           ;         ;
+; Extender.vhd                     ; yes             ; User VHDL File                     ; C:/School/CE1921/Lab 10 - De10 SCP/Extender.vhd       ;         ;
+; Execute.vhd                      ; yes             ; User VHDL File                     ; C:/School/CE1921/Lab 10 - De10 SCP/Execute.vhd        ;         ;
+; Controller.vhd                   ; yes             ; User VHDL File                     ; C:/School/CE1921/Lab 10 - De10 SCP/Controller.vhd     ;         ;
+; Constant8.vhd                    ; yes             ; User VHDL File                     ; C:/School/CE1921/Lab 10 - De10 SCP/Constant8.vhd      ;         ;
+; Constant4.vhd                    ; yes             ; User VHDL File                     ; C:/School/CE1921/Lab 10 - De10 SCP/Constant4.vhd      ;         ;
+; busMux2.vhd                      ; yes             ; User VHDL File                     ; C:/School/CE1921/Lab 10 - De10 SCP/busMux2.vhd        ;         ;
+; barrelShifter.vhd                ; yes             ; User VHDL File                     ; C:/School/CE1921/Lab 10 - De10 SCP/barrelShifter.vhd  ;         ;
+; ALU.vhd                          ; yes             ; User VHDL File                     ; C:/School/CE1921/Lab 10 - De10 SCP/ALU.vhd            ;         ;
+; Adder.vhd                        ; yes             ; User VHDL File                     ; C:/School/CE1921/Lab 10 - De10 SCP/Adder.vhd          ;         ;
+; dmem.vhd                         ; yes             ; User VHDL File                     ; C:/School/CE1921/Lab 10 - De10 SCP/dmem.vhd           ;         ;
+; DE10Computer.bdf                 ; yes             ; User Block Diagram/Schematic File  ; C:/School/CE1921/Lab 10 - De10 SCP/DE10Computer.bdf   ;         ;
+; Seg7.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/School/CE1921/Lab 10 - De10 SCP/Seg7.bdf           ;         ;
+; Reg32.vhd                        ; yes             ; User VHDL File                     ; C:/School/CE1921/Lab 10 - De10 SCP/Reg32.vhd          ;         ;
+; LED.bdf                          ; yes             ; User Block Diagram/Schematic File  ; C:/School/CE1921/Lab 10 - De10 SCP/LED.bdf            ;         ;
+; AddressDecoder.vhd               ; yes             ; User VHDL File                     ; C:/School/CE1921/Lab 10 - De10 SCP/AddressDecoder.vhd ;         ;
+; Synchronizer.bdf                 ; yes             ; User Block Diagram/Schematic File  ; C:/School/CE1921/Lab 10 - De10 SCP/Synchronizer.bdf   ;         ;
+; Reg10.vhd                        ; yes             ; User VHDL File                     ; C:/School/CE1921/Lab 10 - De10 SCP/Reg10.vhd          ;         ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 3,485     ;
+;                                             ;           ;
+; Total combinational functions               ; 1967      ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 1670      ;
+;     -- 3 input functions                    ; 196       ;
+;     -- <=2 input functions                  ; 101       ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 1846      ;
+;     -- arithmetic mode                      ; 121       ;
+;                                             ;           ;
+; Total registers                             ; 1618      ;
+;     -- Dedicated logic registers            ; 1618      ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 220       ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; CLK~input ;
+; Maximum fan-out                             ; 1618      ;
+; Total fan-out                               ; 14316     ;
+; Average fan-out                             ; 3.56      ;
++---------------------------------------------+-----------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                        ;
++------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------+----------------+--------------+
+; Compilation Hierarchy Node   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                    ; Entity Name    ; Library Name ;
++------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------+----------------+--------------+
+; |DE10Computer                ; 1967 (0)            ; 1618 (0)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 220  ; 0            ; 0          ; |DE10Computer                                          ; DE10Computer   ; work         ;
+;    |AddressDecoder:inst5|    ; 11 (11)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10Computer|AddressDecoder:inst5                     ; AddressDecoder ; work         ;
+;    |LED:inst4|               ; 0 (0)               ; 10 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10Computer|LED:inst4                                ; LED            ; work         ;
+;       |Reg32:inst|           ; 0 (0)               ; 10 (10)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10Computer|LED:inst4|Reg32:inst                     ; Reg32          ; work         ;
+;    |Reg10:instreg|           ; 0 (0)               ; 10 (10)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10Computer|Reg10:instreg                            ; Reg10          ; work         ;
+;    |SCP:inst|                ; 1864 (0)            ; 548 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10Computer|SCP:inst                                 ; SCP            ; work         ;
+;       |Controller:inst1|     ; 18 (18)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10Computer|SCP:inst|Controller:inst1                ; Controller     ; work         ;
+;       |Decode:inst2|         ; 720 (0)             ; 512 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10Computer|SCP:inst|Decode:inst2                    ; Decode         ; work         ;
+;          |Adder:inst3|       ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10Computer|SCP:inst|Decode:inst2|Adder:inst3        ; Adder          ; work         ;
+;          |Extender:inst1|    ; 20 (20)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10Computer|SCP:inst|Decode:inst2|Extender:inst1     ; Extender       ; work         ;
+;          |RegSRCBmux:inst|   ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10Computer|SCP:inst|Decode:inst2|RegSRCBmux:inst    ; RegSRCBmux     ; work         ;
+;          |regfile:inst4|     ; 664 (664)           ; 512 (512)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10Computer|SCP:inst|Decode:inst2|regfile:inst4      ; regfile        ; work         ;
+;       |Execute:inst4|        ; 252 (0)             ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10Computer|SCP:inst|Execute:inst4                   ; Execute        ; work         ;
+;          |ALU:ALU_0|         ; 219 (219)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10Computer|SCP:inst|Execute:inst4|ALU:ALU_0         ; ALU            ; work         ;
+;          |Reg4:Reg4_0|       ; 1 (1)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10Computer|SCP:inst|Execute:inst4|Reg4:Reg4_0       ; Reg4           ; work         ;
+;          |busMux2:busmux2_0| ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10Computer|SCP:inst|Execute:inst4|busMux2:busmux2_0 ; busMux2        ; work         ;
+;       |Fetch:inst3|          ; 137 (0)             ; 32 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10Computer|SCP:inst|Fetch:inst3                     ; Fetch          ; work         ;
+;          |Adder:inst4|       ; 29 (29)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10Computer|SCP:inst|Fetch:inst3|Adder:inst4         ; Adder          ; work         ;
+;          |Adder:inst5|       ; 30 (30)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10Computer|SCP:inst|Fetch:inst3|Adder:inst5         ; Adder          ; work         ;
+;          |PC:inst2|          ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10Computer|SCP:inst|Fetch:inst3|PC:inst2            ; PC             ; work         ;
+;          |irom:inst6|        ; 78 (78)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10Computer|SCP:inst|Fetch:inst3|irom:inst6          ; irom           ; work         ;
+;       |busMux2:inst10|       ; 30 (30)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10Computer|SCP:inst|busMux2:inst10                  ; busMux2        ; work         ;
+;       |busMux2:inst11|       ; 707 (707)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10Computer|SCP:inst|busMux2:inst11                  ; busMux2        ; work         ;
+;    |Seg7:inst7seg|           ; 42 (0)              ; 24 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10Computer|Seg7:inst7seg                            ; Seg7           ; work         ;
+;       |Reg32:inst|           ; 0 (0)               ; 24 (24)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10Computer|Seg7:inst7seg|Reg32:inst                 ; Reg32          ; work         ;
+;       |seg7decode:inst1|     ; 42 (42)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10Computer|Seg7:inst7seg|seg7decode:inst1           ; seg7decode     ; work         ;
+;    |Synchronizer:inst7|      ; 0 (0)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10Computer|Synchronizer:inst7                       ; Synchronizer   ; work         ;
+;    |dmem:inst2|              ; 50 (50)             ; 1024 (1024)               ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10Computer|dmem:inst2                               ; dmem           ; work         ;
++------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------+----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; AddressDecoder:inst5|DATAS                         ; GND                 ; yes                    ;
+; Number of user-specified and inferred latches = 1  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; Reg10:instreg|Q[10..31]                ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 22 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 1618  ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 1     ;
+; Number of registers using Asynchronous Clear ; 1618  ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 1576  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
+; 8:1                ; 32 bits   ; 160 LEs       ; 128 LEs              ; 32 LEs                 ; No         ; |DE10Computer|SCP:inst|Execute:inst4|ALU:ALU_0|Mux7     ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |DE10Computer|SCP:inst|Controller:inst1|ALUS[1]         ;
+; 16:1               ; 32 bits   ; 320 LEs       ; 320 LEs              ; 0 LEs                  ; No         ; |DE10Computer|SCP:inst|Decode:inst2|regfile:inst4|Mux26 ;
+; 16:1               ; 32 bits   ; 320 LEs       ; 320 LEs              ; 0 LEs                  ; No         ; |DE10Computer|SCP:inst|Decode:inst2|regfile:inst4|Mux36 ;
+; 34:1               ; 22 bits   ; 484 LEs       ; 484 LEs              ; 0 LEs                  ; No         ; |DE10Computer|SCP:inst|busMux2:inst11|Y[16]             ;
+; 34:1               ; 10 bits   ; 220 LEs       ; 220 LEs              ; 0 LEs                  ; No         ; |DE10Computer|SCP:inst|busMux2:inst11|Y[0]              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 220                         ;
+; cycloneiii_ff         ; 1618                        ;
+;     CLR               ; 42                          ;
+;     ENA CLR           ; 1575                        ;
+;     ENA CLR SLD       ; 1                           ;
+; cycloneiii_lcell_comb ; 1984                        ;
+;     arith             ; 121                         ;
+;         2 data inputs ; 57                          ;
+;         3 data inputs ; 64                          ;
+;     normal            ; 1863                        ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 17                          ;
+;         2 data inputs ; 42                          ;
+;         3 data inputs ; 132                         ;
+;         4 data inputs ; 1670                        ;
+;                       ;                             ;
+; Max LUT depth         ; 26.50                       ;
+; Average LUT depth     ; 15.27                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:08     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+    Info: Processing started: Fri May 17 15:57:29 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE10Computer -c DE10Computer
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file seg7decode.vhd
+    Info (12022): Found design unit 1: seg7decode-behav File: C:/School/CE1921/Lab 10 - De10 SCP/seg7decode.vhd Line: 13
+    Info (12023): Found entity 1: seg7decode File: C:/School/CE1921/Lab 10 - De10 SCP/seg7decode.vhd Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file scp.bdf
+    Info (12023): Found entity 1: SCP
+Info (12021): Found 1 design units, including 1 entities, in source file fetch.bdf
+    Info (12023): Found entity 1: Fetch
+Info (12021): Found 1 design units, including 1 entities, in source file decode.bdf
+    Info (12023): Found entity 1: Decode
+Info (12021): Found 2 design units, including 1 entities, in source file regsrcbmux.vhd
+    Info (12022): Found design unit 1: RegSRCBmux-behavioral File: C:/School/CE1921/Lab 10 - De10 SCP/RegSRCBmux.vhd Line: 15
+    Info (12023): Found entity 1: RegSRCBmux File: C:/School/CE1921/Lab 10 - De10 SCP/RegSRCBmux.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file regfile.vhd
+    Info (12022): Found design unit 1: regfile-behavioral File: C:/School/CE1921/Lab 10 - De10 SCP/regfile.vhd Line: 28
+    Info (12023): Found entity 1: regfile File: C:/School/CE1921/Lab 10 - De10 SCP/regfile.vhd Line: 15
+Info (12021): Found 2 design units, including 1 entities, in source file reg4.vhd
+    Info (12022): Found design unit 1: Reg4-behavioral File: C:/School/CE1921/Lab 10 - De10 SCP/Reg4.vhd Line: 14
+    Info (12023): Found entity 1: Reg4 File: C:/School/CE1921/Lab 10 - De10 SCP/Reg4.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file pc.vhd
+    Info (12022): Found design unit 1: PC-dataflow File: C:/School/CE1921/Lab 10 - De10 SCP/PC.vhd Line: 15
+    Info (12023): Found entity 1: PC File: C:/School/CE1921/Lab 10 - De10 SCP/PC.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file irom.vhd
+    Info (12022): Found design unit 1: irom-dataflow File: C:/School/CE1921/Lab 10 - De10 SCP/irom.vhd Line: 36
+    Info (12023): Found entity 1: irom File: C:/School/CE1921/Lab 10 - De10 SCP/irom.vhd Line: 31
+Info (12021): Found 2 design units, including 1 entities, in source file extender.vhd
+    Info (12022): Found design unit 1: Extender-dataflow File: C:/School/CE1921/Lab 10 - De10 SCP/Extender.vhd Line: 16
+    Info (12023): Found entity 1: Extender File: C:/School/CE1921/Lab 10 - De10 SCP/Extender.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file execute.vhd
+    Info (12022): Found design unit 1: Execute-dataflow File: C:/School/CE1921/Lab 10 - De10 SCP/Execute.vhd Line: 19
+    Info (12023): Found entity 1: Execute File: C:/School/CE1921/Lab 10 - De10 SCP/Execute.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file controller.vhd
+    Info (12022): Found design unit 1: Controller-dataflow File: C:/School/CE1921/Lab 10 - De10 SCP/Controller.vhd Line: 23
+    Info (12023): Found entity 1: Controller File: C:/School/CE1921/Lab 10 - De10 SCP/Controller.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file constant8.vhd
+    Info (12022): Found design unit 1: Constant8-dataflow File: C:/School/CE1921/Lab 10 - De10 SCP/Constant8.vhd Line: 15
+    Info (12023): Found entity 1: Constant8 File: C:/School/CE1921/Lab 10 - De10 SCP/Constant8.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file constant4.vhd
+    Info (12022): Found design unit 1: Constant4-dataflow File: C:/School/CE1921/Lab 10 - De10 SCP/Constant4.vhd Line: 14
+    Info (12023): Found entity 1: Constant4 File: C:/School/CE1921/Lab 10 - De10 SCP/Constant4.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file busmux2.vhd
+    Info (12022): Found design unit 1: busMux2-dataflow File: C:/School/CE1921/Lab 10 - De10 SCP/busMux2.vhd Line: 13
+    Info (12023): Found entity 1: busMux2 File: C:/School/CE1921/Lab 10 - De10 SCP/busMux2.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file barrelshifter.vhd
+    Info (12022): Found design unit 1: barrelShifter-dataflow File: C:/School/CE1921/Lab 10 - De10 SCP/barrelShifter.vhd Line: 17
+    Info (12023): Found entity 1: barrelShifter File: C:/School/CE1921/Lab 10 - De10 SCP/barrelShifter.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
+    Info (12022): Found design unit 1: ALU-dataflow File: C:/School/CE1921/Lab 10 - De10 SCP/ALU.vhd Line: 19
+    Info (12023): Found entity 1: ALU File: C:/School/CE1921/Lab 10 - De10 SCP/ALU.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file adder.vhd
+    Info (12022): Found design unit 1: Adder-dataflow File: C:/School/CE1921/Lab 10 - De10 SCP/Adder.vhd Line: 15
+    Info (12023): Found entity 1: Adder File: C:/School/CE1921/Lab 10 - De10 SCP/Adder.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file dmem.vhd
+    Info (12022): Found design unit 1: dmem-behavioral File: C:/School/CE1921/Lab 10 - De10 SCP/dmem.vhd Line: 48
+    Info (12023): Found entity 1: dmem File: C:/School/CE1921/Lab 10 - De10 SCP/dmem.vhd Line: 36
+Info (12021): Found 1 design units, including 1 entities, in source file de10computer.bdf
+    Info (12023): Found entity 1: DE10Computer
+Info (12021): Found 1 design units, including 1 entities, in source file seg7.bdf
+    Info (12023): Found entity 1: Seg7
+Info (12021): Found 2 design units, including 1 entities, in source file reg32.vhd
+    Info (12022): Found design unit 1: Reg32-behavioral File: C:/School/CE1921/Lab 10 - De10 SCP/Reg32.vhd Line: 15
+    Info (12023): Found entity 1: Reg32 File: C:/School/CE1921/Lab 10 - De10 SCP/Reg32.vhd Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file led.bdf
+    Info (12023): Found entity 1: LED
+Info (12021): Found 2 design units, including 1 entities, in source file addressdecoder.vhd
+    Info (12022): Found design unit 1: AddressDecoder-dataflow File: C:/School/CE1921/Lab 10 - De10 SCP/AddressDecoder.vhd Line: 19
+    Info (12023): Found entity 1: AddressDecoder File: C:/School/CE1921/Lab 10 - De10 SCP/AddressDecoder.vhd Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file synchronizer.bdf
+    Info (12023): Found entity 1: Synchronizer
+Info (12021): Found 2 design units, including 1 entities, in source file reg10.vhd
+    Info (12022): Found design unit 1: Reg10-behavioral File: C:/School/CE1921/Lab 10 - De10 SCP/Reg10.vhd Line: 15
+    Info (12023): Found entity 1: Reg10 File: C:/School/CE1921/Lab 10 - De10 SCP/Reg10.vhd Line: 6
+Info (12127): Elaborating entity "DE10Computer" for the top level hierarchy
+Info (12128): Elaborating entity "SCP" for hierarchy "SCP:inst"
+Info (12128): Elaborating entity "Controller" for hierarchy "SCP:inst|Controller:inst1"
+Warning (10036): Verilog HDL or VHDL warning at Controller.vhd(27): object "U" assigned a value but never read File: C:/School/CE1921/Lab 10 - De10 SCP/Controller.vhd Line: 27
+Warning (10036): Verilog HDL or VHDL warning at Controller.vhd(29): object "W" assigned a value but never read File: C:/School/CE1921/Lab 10 - De10 SCP/Controller.vhd Line: 29
+Info (12128): Elaborating entity "Execute" for hierarchy "SCP:inst|Execute:inst4"
+Info (12128): Elaborating entity "busMux2" for hierarchy "SCP:inst|Execute:inst4|busMux2:busmux2_0" File: C:/School/CE1921/Lab 10 - De10 SCP/Execute.vhd Line: 28
+Info (12128): Elaborating entity "ALU" for hierarchy "SCP:inst|Execute:inst4|ALU:ALU_0" File: C:/School/CE1921/Lab 10 - De10 SCP/Execute.vhd Line: 30
+Info (12128): Elaborating entity "Reg4" for hierarchy "SCP:inst|Execute:inst4|Reg4:Reg4_0" File: C:/School/CE1921/Lab 10 - De10 SCP/Execute.vhd Line: 32
+Info (12128): Elaborating entity "Decode" for hierarchy "SCP:inst|Decode:inst2"
+Info (12128): Elaborating entity "Adder" for hierarchy "SCP:inst|Decode:inst2|Adder:inst3"
+Info (12128): Elaborating entity "barrelShifter" for hierarchy "SCP:inst|Decode:inst2|barrelShifter:inst2"
+Info (12128): Elaborating entity "Extender" for hierarchy "SCP:inst|Decode:inst2|Extender:inst1"
+Info (12128): Elaborating entity "regfile" for hierarchy "SCP:inst|Decode:inst2|regfile:inst4"
+Info (12128): Elaborating entity "RegSRCBmux" for hierarchy "SCP:inst|Decode:inst2|RegSRCBmux:inst"
+Warning (10492): VHDL Process Statement warning at RegSRCBmux.vhd(20): signal "D1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/School/CE1921/Lab 10 - De10 SCP/RegSRCBmux.vhd Line: 20
+Warning (10492): VHDL Process Statement warning at RegSRCBmux.vhd(22): signal "D0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/School/CE1921/Lab 10 - De10 SCP/RegSRCBmux.vhd Line: 22
+Info (12128): Elaborating entity "Fetch" for hierarchy "SCP:inst|Fetch:inst3"
+Info (12128): Elaborating entity "irom" for hierarchy "SCP:inst|Fetch:inst3|irom:inst6"
+Info (12128): Elaborating entity "PC" for hierarchy "SCP:inst|Fetch:inst3|PC:inst2"
+Info (12128): Elaborating entity "Constant4" for hierarchy "SCP:inst|Fetch:inst3|Constant4:inst"
+Info (12128): Elaborating entity "Constant8" for hierarchy "SCP:inst|Fetch:inst3|Constant8:inst1"
+Info (12128): Elaborating entity "busMux2" for hierarchy "SCP:inst|busMux2:inst10"
+Info (12128): Elaborating entity "Synchronizer" for hierarchy "Synchronizer:inst7"
+Info (12128): Elaborating entity "AddressDecoder" for hierarchy "AddressDecoder:inst5"
+Info (10041): Inferred latch for "DATAS" at AddressDecoder.vhd(38) File: C:/School/CE1921/Lab 10 - De10 SCP/AddressDecoder.vhd Line: 38
+Info (12128): Elaborating entity "Reg10" for hierarchy "Reg10:instreg"
+Info (12128): Elaborating entity "dmem" for hierarchy "dmem:inst2"
+Info (12128): Elaborating entity "LED" for hierarchy "LED:inst4"
+Info (12128): Elaborating entity "Reg32" for hierarchy "LED:inst4|Reg32:inst"
+Info (12128): Elaborating entity "Seg7" for hierarchy "Seg7:inst7seg"
+Info (12128): Elaborating entity "seg7decode" for hierarchy "Seg7:inst7seg|seg7decode:inst1"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "PCWR" is stuck at VCC
+    Warning (13410): Pin "ROTATE[3]" is stuck at GND
+    Warning (13410): Pin "ROTATE[2]" is stuck at GND
+    Warning (13410): Pin "ROTATE[1]" is stuck at GND
+    Warning (13410): Pin "ROTATE[0]" is stuck at GND
+    Warning (13410): Pin "SEG0[7]" is stuck at VCC
+    Warning (13410): Pin "SEG1[7]" is stuck at VCC
+    Warning (13410): Pin "SEG2[7]" is stuck at VCC
+    Warning (13410): Pin "SEG3[7]" is stuck at VCC
+    Warning (13410): Pin "SEG4[7]" is stuck at VCC
+    Warning (13410): Pin "SEG5[7]" is stuck at VCC
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 3772 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
+    Info (21059): Implemented 208 output pins
+    Info (21061): Implemented 3552 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 17 warnings
+    Info: Peak virtual memory: 4821 megabytes
+    Info: Processing ended: Fri May 17 15:57:50 2019
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:36
+
+
